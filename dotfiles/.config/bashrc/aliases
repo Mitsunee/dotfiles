@@ -1,0 +1,90 @@
+### dev ###
+alias find-todo='egrep -nrHi "(\/{2,}|\/\*+|#+) ?(TODO|WIP|DEBUG|PLACEHOLDER|NOTE|TEMP|BUG)"'
+
+# yarn
+alias yrn='yarn run'
+alias yadd='yarn add'
+alias yrm='yarn remove'
+alias yup='yarn upgrade-interactive'
+complete -W '--latest' yup
+
+# node.js
+alias npkill='npkill --exclude ".cache,.config,.local,.var"'
+alias npm-g='npm i -g'
+
+# git
+alias gp='git push'
+alias gpt='git push --tags'
+alias gpull='git pull'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gbr-spawn='read -p "New Branch Name: " TEMP && git branch $TEMP && git checkout $TEMP && git push -u origin $TEMP;'
+alias glog='git log --oneline | head -n 20'
+alias git-latest-tag='git describe --tags `git rev-list --tags --max-count=1`'
+alias git-checkout-latest='git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"'
+
+# atom flatpak cli
+alias atom='flatpak run --command=atom io.atom.Atom'
+alias apm='flatpak run --command=apm io.atom.Atom'
+
+# ddev & docker
+alias ddev-start='sudo systemctl start docker && ddev start'
+alias ddev-stop='ddev poweroff && sudo systemctl stop docker.socket'
+
+### Launch commands ###
+# LSD
+alias ls='lsd'
+alias la='lsd -a'
+alias ll='lsd -l'
+alias lla='lsd -la'
+alias tree='lsd --tree'
+alias tree-shallow='lsd --tree --depth 2'
+
+# systemd
+alias service-start='sudo systemctl start'
+alias service-stop='sudo systemctl stop'
+alias service-status='sudo systemctl status'
+
+# mprocs
+alias twitch="mprocs -c \$XDG_CONFIG_HOME/mprocs/twitch.yml"
+
+# optipng
+alias opti-normal='optipng -o4'
+alias opti-crazy='optipng -o7 -zm1-9'
+
+# dnf
+alias upgrade='sudo dnf upgrade --refresh'
+alias upgradeable='sudo dnf check-update'
+alias install='sudo dnf install'
+alias uninstall='sudo dnf remove'
+
+# updating other packages
+alias flat-up='flatpak update'
+alias npm-up='ncu -g'
+alias cargo-up='cargo install-update -a'
+
+### Custom Commands ###
+# list directories in $PATH
+alias show-path='echo $PATH | sed -En "s/:/\n/pg"'
+
+# count files in the current directory
+alias fcount='printf "${PWD##*/} - $(find . -maxdepth 1 -type f | wc -l) Files\n"'
+
+# recursively count files in the current directory and subdirectories
+alias rfcount='printf "${PWD##*/} - $(find . -type f | wc -l) Files\n"'
+
+# forget bash history of this session
+alias forget='history -c'
+
+### Other ###
+# edit this file
+alias edit-alias="\$EDITOR \$XDG_CONFIG_HOME/bashrc/aliases && source \$XDG_CONFIG_HOME/bashrc/aliases"
+
+# good manners
+alias please='sudo'
+
+# shutdown
+alias ninii="sudo shutdown now"
+
+
+echo "Loaded aliases"

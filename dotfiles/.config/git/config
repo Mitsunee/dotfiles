@@ -1,0 +1,13 @@
+[include]
+	path = ~/.config/git/default
+[includeif "gitdir:~/Work/"]
+	path = ~/.config/git/work
+
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[init]
+	defaultBranch = main
+[advice]
+	detachedHead = false

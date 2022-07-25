@@ -1,0 +1,53 @@
+# .bash_profile
+# XDG USER
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# LOCALE
+export LANG="en_US.UTF-8"
+export LANGUAGE="en"
+export LC_CTYPE="en_US.UTF-8"
+export LC_NUMERIC="de_DE.UTF-8"
+export LC_TIME="de_DE.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="de_DE.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="en_US.UTF-8"
+export LC_NAME="en_US.UTF-8"
+export LC_ADDRESS="en_US.UTF-8"
+export LC_TELEPHONE="en_US.UTF-8"
+export LC_MEASUREMENT="de_DE.UTF-8"
+export LC_IDENTIFICATION="en_US.UTF-8"
+
+# N / NODE JS
+export N_PREFIX="$XDG_DATA_HOME/node"
+export N_CACHE_PREFIX="$XDG_CACHE_HOME"
+export N_PRESERVE_NPM=1
+export N_PRESERVE_COREPACK=1
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl/history"
+
+# OTHER
+export GOPATH="$XDG_DATA_HOME/go"
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export KDEHOME="$XDG_CONFIG_HOME/kde"
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export WINEPREFIX="$XDG_DATA_HOME/wine"
+
+#PATH
+appendpath () {
+  if [[ $PATH != *"$*"* ]]; then
+    export PATH="$PATH:$*";
+  fi
+}
+
+appendpath "$HOME/.local/bin"
+appendpath "$CARGO_HOME/bin" # cargo/rust
+appendpath "$N_PREFIX/bin" # node.js
+appendpath "$GOPATH/bin" # golang
+unset appendpath;

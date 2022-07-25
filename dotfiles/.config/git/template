@@ -1,0 +1,4 @@
+[user]
+        email = email@goes.here
+        name = YOUR_NAME
+        signingKey = YOUR_KEY
