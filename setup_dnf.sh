@@ -7,21 +7,24 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   exit;
 fi;
 
-# setup flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # install dnf packages
 sudo dnf install --assumeyes \
+  flatpak \
   neofetch \
   rust \
-  cargo \
-  git;
+  cargo;
+
+# setup flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
 
 # install flatpak apps
 flatpak install --assumeyes \
-  com.tchx84.Flatseal \
-  com.Eloston.UngoogledChromium \
+  com.github.tchx84.Flatseal \
+  com.github.Eloston.UngoogledChromium \
   com.bitwarden.desktop;
 
 # install rust apps
-cargo install lsd starship cargo-update;
+cargo install \
+  lsd \
+  starship \
+  cargo-update;

@@ -2,6 +2,14 @@
 
 This repository contains part of my dotfiles. **Use at your own risk**
 
+## Usage
+
+```sh
+sudo dnf install -y rsync git
+git clone https://github.com/Mitsunee/dotfiles
+cd dotfiles
+```
+
 ## bootstrap.sh
 
 This script unpacks the content of the [`dotfiles`](dotfiles) directory into your home directory. This **WILL** wipe any already existing files of the same names!
