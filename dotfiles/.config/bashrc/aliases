@@ -23,9 +23,10 @@ alias glog='git log --oneline | head -n 20'
 alias git-latest-tag='git describe --tags `git rev-list --tags --max-count=1`'
 alias git-checkout-latest='git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"'
 
-# atom flatpak cli
+# flatpak cli
 alias atom='flatpak run --command=atom io.atom.Atom'
 alias apm='flatpak run --command=apm io.atom.Atom'
+alias code='flatpak run com.vscodium.codium'
 
 # ddev & docker
 alias ddev-start='sudo systemctl start docker && ddev start'
