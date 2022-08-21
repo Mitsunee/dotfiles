@@ -9,6 +9,7 @@ fi;
 
 # install dnf packages
 sudo dnf install --assumeyes \
+  openssl-devel \
   flatpak \
   neofetch \
   rust \
