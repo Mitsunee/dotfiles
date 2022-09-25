@@ -46,9 +46,6 @@ alias service-start='sudo systemctl start'
 alias service-stop='sudo systemctl stop'
 alias service-status='sudo systemctl status'
 
-# mprocs
-alias twitch="mprocs -c \$XDG_CONFIG_HOME/mprocs/twitch.yml"
-
 # optipng
 alias opti-normal='optipng -o4'
 alias opti-crazy='optipng -o7 -zm1-9'
