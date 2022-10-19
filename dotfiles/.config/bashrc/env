@@ -47,6 +47,7 @@ appendpath () {
 }
 
 appendpath "$HOME/.local/bin"
+appendpath "$HOME/Bin" # bash scripts
 appendpath "$CARGO_HOME/bin" # cargo/rust
 appendpath "$N_PREFIX/bin" # node.js
 appendpath "$GOPATH/bin" # golang
