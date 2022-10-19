@@ -66,5 +66,11 @@ npm install -g \
   vercel@latest \
   snyk@latest;
 
+# install go packages
+go install github.com/Gelio/go-global-update@latest;
+go install github.com/cheat/cheat/cmd/cheat@latest;
+go install github.com/charmbracelet/glow@latest;
+go install github.com/charmbracelet/gum@latest;
+
 # mprocs
 cargo install mprocs;
