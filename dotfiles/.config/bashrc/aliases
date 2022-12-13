@@ -56,28 +56,9 @@ alias upgradeable='sudo dnf check-update'
 alias install='sudo dnf install'
 alias uninstall='sudo dnf remove'
 
-# updating other packages
-alias flat-up='flatpak update'
-alias npm-up='ncu -g'
-alias cargo-up='cargo install-update -a'
-
-# streamlink
-function twitch() {
-  if [[ ! $1 ]]; then
-    echo "Stream name needed";
-    return 1;
-  fi
-
-  local stream=$1;
-  shift;
-
-  local quality=${1:-720p};
-  shift;
-
-  streamlink "https://twitch.tv/$stream" "$quality" $@
-  return 0;
-}
-export -f twitch;
+# other
+alias less='moar'
+alias more='moar'
 
 ### Custom Commands ###
 # list directories in $PATH

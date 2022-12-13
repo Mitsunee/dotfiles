@@ -25,7 +25,6 @@ sudo dnf install --assumeyes \
   android-tools \
   steam \
   wine \
-  streamlink \
   golang;
 
 # install flatpaks
@@ -41,7 +40,6 @@ flatpak install --assumeyes \
   com.vscodium.codium \
   org.filezillaproject.Filezilla \
   net.davidotek.pupgui2 \
-  com.getpostman.Postman \
   com.transmissionbt.Transmission;
 
 # prepare node.js
@@ -61,6 +59,7 @@ npm install -g \
   npm@latest \
   yarn@latest \
   pnpm@latest \
+  lerna@latest \
   npkill@latest \
   yarn-deduplicate@latest \
   vercel@latest \
@@ -71,6 +70,7 @@ go install github.com/Gelio/go-global-update@latest;
 go install github.com/cheat/cheat/cmd/cheat@latest;
 go install github.com/charmbracelet/glow@latest;
 go install github.com/charmbracelet/gum@latest;
+go install github.com/walles/moar@latest;
 
 # mprocs
 cargo install mprocs;
