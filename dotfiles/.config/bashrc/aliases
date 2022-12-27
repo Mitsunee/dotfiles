@@ -1,5 +1,7 @@
 ### dev ###
-alias find-todo='egrep -nrHi "(\/{2,}|\/\*+|#+) ?(TODO|WIP|DEBUG|PLACEHOLDER|NOTE|TEMP|BUG)"'
+alias rgrep='grep -nrH'
+alias regrep='egrep -nrH'
+alias find-todo='egrep -nrHi "(\/{2,}|\/\*+|#+) ?(TODO|WIP|DEBUG|PLACEHOLDER|FIXME|TEMP|BUG)"'
 
 # yarn
 alias yrn='yarn run'
