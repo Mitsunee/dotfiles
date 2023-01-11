@@ -20,14 +20,13 @@ alias gpt='git push --tags'
 alias gpull='git pull'
 alias gc='git commit'
 alias gcm='git commit -m'
-alias gbr-spawn='read -p "New Branch Name: " TEMP && git branch $TEMP && git checkout $TEMP && git push -u origin $TEMP;'
+alias gca='git commit --amend'
+alias gca-no-edit='git commit --amend --no-edit'
 alias glog='git log --oneline | head -n 20'
 alias git-latest-tag='git describe --tags `git rev-list --tags --max-count=1`'
 alias git-checkout-latest='git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"'
 
 # flatpak cli
-alias atom='flatpak run --command=atom io.atom.Atom'
-alias apm='flatpak run --command=apm io.atom.Atom'
 alias code='flatpak run com.vscodium.codium'
 
 # ddev & docker
@@ -92,3 +91,7 @@ alias ninii="sudo shutdown now"
 
 
 echo "Loaded aliases"
+
+# tabtab source for pnpm package
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
