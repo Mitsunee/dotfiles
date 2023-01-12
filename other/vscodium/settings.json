@@ -1,0 +1,39 @@
+{
+  "workbench.colorTheme": "Monokai",
+  "workbench.statusBar.visible": false,
+  "workbench.preferredDarkColorTheme": "Monokai",
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.activityBar.visible": false,
+  "window.zoomLevel": 1,
+  "window.menuBarVisibility": "toggle",
+  "editor.fontFamily": "'Hack Mono', 'Ubuntu Mono', monospace",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "explorer.autoRevealExclude": {
+    "**/node_modules": true,
+    "**/.next": true
+  },
+  
+  "eslint.packageManager": "yarn",
+  "prettier.requireConfig": true,
+  "prettier.configPath": ".prettierrc.json",
+  "[html][javascript][javascriptreact][typescript][typescriptreact][json][jsonc][yaml][css][scss][vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "files.associations": {
+    "*.module.css": "scss"
+  },
+  
+  
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "breadcrumbs.enabled": false,
+  
+  "importCost.bundleSizeColoring": "compressed",
+  "redhat.telemetry.enabled": true
+}
