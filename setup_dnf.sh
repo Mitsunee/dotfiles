@@ -13,7 +13,9 @@ sudo dnf install --assumeyes \
   flatpak \
   neofetch \
   rust \
-  cargo;
+  cargo \
+  golang \
+  kitty;
 
 # setup flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
@@ -24,8 +26,13 @@ flatpak install --assumeyes \
   com.github.Eloston.UngoogledChromium \
   com.bitwarden.desktop;
 
-# install rust apps
+# install rust packages
 cargo install \
   lsd \
   starship \
   cargo-update;
+
+# install go packages
+go install github.com/Gelio/go-global-update@latest;
+go install github.com/charmbracelet/gum@latest;
+go install github.com/walles/moar@latest;

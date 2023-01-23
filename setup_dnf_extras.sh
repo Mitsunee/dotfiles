@@ -24,8 +24,7 @@ sudo dnf install --assumeyes \
   SFML-devel \
   android-tools \
   steam \
-  wine \
-  golang;
+  wine;
 
 # install flatpaks
 flatpak install --assumeyes \
@@ -66,11 +65,5 @@ npm install -g \
   snyk@latest;
 
 # install go packages
-go install github.com/Gelio/go-global-update@latest;
 go install github.com/cheat/cheat/cmd/cheat@latest;
 go install github.com/charmbracelet/glow@latest;
-go install github.com/charmbracelet/gum@latest;
-go install github.com/walles/moar@latest;
-
-# mprocs
-cargo install mprocs;
