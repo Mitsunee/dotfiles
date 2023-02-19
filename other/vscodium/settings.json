@@ -1,25 +1,44 @@
 {
   "workbench.colorTheme": "Monokai",
-  "workbench.statusBar.visible": false,
   "workbench.preferredDarkColorTheme": "Monokai",
   "workbench.tips.enabled": false,
   "workbench.startupEditor": "none",
   "workbench.activityBar.visible": false,
-  "window.zoomLevel": 1,
+  "workbench.statusBar.visible": false,
   "window.menuBarVisibility": "toggle",
+  "explorer.confirmDelete": false,
+  "files.enableTrash": false,
+  
   "editor.fontFamily": "'Hack Mono', 'Ubuntu Mono', monospace",
+  "editor.fontSize": 17,  
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": false,
+
+  "files.exclude": {
+    "**/.next": true,
+    "**/.vercel": true,
+    "**/node_modules": true
+  },
+  "files.associations": {
+    "*.module.css": "scss"
+  },
   "explorer.autoRevealExclude": {
     "**/node_modules": true,
-    "**/.next": true
+    "**/.next": true,
+    "**/.swc": true
   },
   
-  "eslint.packageManager": "yarn",
-  "prettier.requireConfig": true,
-  "prettier.configPath": ".prettierrc.json",
-  "[html][javascript][javascriptreact][typescript][typescriptreact][json][jsonc][yaml][css][scss][vue]": {
+  "[html][javascript][typescript][css][scss][json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact][typescriptreact][vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json][jsonc][yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
@@ -27,17 +46,29 @@
     "editor.defaultFormatter": "astro-build.astro-vscode",
     "editor.formatOnSave": true
   },
+  
   "css.validate": false,
   "scss.validate": false,
-  "files.associations": {
-    "*.module.css": "scss"
-  },
-  
-  
+  "eslint.packageManager": "yarn",
+  "prettier.requireConfig": true,
+  "prettier.configPath": ".prettierrc.json",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "breadcrumbs.enabled": false,
   
   "importCost.bundleSizeColoring": "compressed",
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+
+  "todo-tree.tree.expanded": true,
+  "todo-tree.tree.flat": true,
+  "todo-tree.tree.groupedByTag": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "FIXME",
+    "TODO",
+    "PLACEHOLDER",
+    "WIP",
+    "TEMP",
+    "DEBUG"
+  ]
 }
