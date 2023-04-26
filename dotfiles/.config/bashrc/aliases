@@ -1,6 +1,7 @@
 ### dev ###
 alias rgrep='grep -nrH'
-alias regrep='egrep -nrH'
+alias regrep='grep -nrHE'
+alias egrep='grep -E' # Fedora 38 deprecated egrep with an annoying warning. Aliases are too hard for redhat?
 alias find-todo='egrep -nrHi "(\/{2,}|\/\*+|#+) ?(TODO|WIP|DEBUG|PLACEHOLDER|FIXME|TEMP|BUG)"'
 
 # yarn
