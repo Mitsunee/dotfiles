@@ -17,3 +17,7 @@ This script unpacks the content of the [`dotfiles`](dotfiles) directory into you
 ## Setup scripts
 
 These script install a bunch of packages I use. They were made for Fedora-based distros. `setup_dnf.sh` contains the bare minimum I install on every machine, while `setup_dnf_extras.sh` contains most of what I use on my desktop sans stuff built from source.
+
+## Other
+
+See [docs](./docs) for more setup things that cannot be automated as easily
