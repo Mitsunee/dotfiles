@@ -1,13 +1,19 @@
 ### dev ###
+# grep
+alias egrep='grep -E'
+alias fgrep='grep -F'
+alias pgrep='grep -P'
+
+# grep (recursive)
 alias rgrep='grep -nrH'
 alias regrep='grep -nrHE'
-alias egrep='grep -E' # Fedora 38 deprecated egrep with an annoying warning. Aliases are too hard for redhat?
+alias rfgrep='grep -nrHF'
+alias rpgrep='grep -nrHP'
+
+# grep (other)
 alias find-todo="grep -nrHEi '(/{2,}|/\*+|#+) ?(TODO|WIP|DEBUG|PLACEHOLDER|FIXME|TEMP|BUG)'"
 
 # yarn
-alias yrn='yarn run'
-alias yadd='yarn add'
-alias yrm='yarn remove'
 alias yup='yarn upgrade-interactive'
 complete -W '--latest' yup
 
@@ -29,10 +35,6 @@ alias git-checkout-latest='git checkout "$(git describe --tags `git rev-list --t
 
 # flatpak cli
 alias code='flatpak run com.vscodium.codium'
-
-# ddev & docker
-alias ddev-start='sudo systemctl start docker && ddev start'
-alias ddev-stop='ddev poweroff && sudo systemctl stop docker.socket'
 
 ### Launch commands ###
 # LSD
@@ -61,6 +63,7 @@ alias uninstall='sudo dnf remove'
 # other
 alias less='moar'
 alias more='moar'
+alias killcord='killall -9 Discord'
 
 ### Custom Commands ###
 # list directories in $PATH
@@ -90,9 +93,8 @@ alias please='sudo'
 # shutdown
 alias ninii="sudo shutdown now"
 
+### Other ###
+# tabtab source for pnpm package
+[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
 
 echo "Loaded aliases"
-
-# tabtab source for pnpm package
-# uninstall by removing these lines
-[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
