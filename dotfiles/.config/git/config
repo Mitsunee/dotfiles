@@ -11,3 +11,5 @@
 	defaultBranch = main
 [advice]
 	detachedHead = false
+[alias]
+	uncommit = !git reset --soft HEAD^ && git status
