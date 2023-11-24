@@ -13,3 +13,5 @@
 	detachedHead = false
 [alias]
 	uncommit = !git reset --soft HEAD^ && git status
+	graph = log --oneline --all --graph --pretty --decorate --date=short
+	latest = log --oneline -n 20
