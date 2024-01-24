@@ -19,7 +19,7 @@ print_logo
 unset print_logo
 
 ## load theme
-if [ $(which starship) ]; then
+if [ -x "$(command -v starship)" ]; then
   eval "$(starship init bash)"
 fi
 
