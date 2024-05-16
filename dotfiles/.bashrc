@@ -1,15 +1,14 @@
-sourcesafely () {
-	if  [ -f "$*" ]; then
-		. "$*";
-	fi
-}
+# source global definitions
+if [ -f "/etc/bashrc" ]; then
+    . /etc/bashrc;
+fi
 
-# Source global definitions
-sourcesafely /etc/bashrc;
+# user specific aliases and functions
+for FILE in "$XDG_CONFIG_HOME/bashrc"/*; do
+    [[ -f "$FILE" && "$FILE" != *head ]] && . "$FILE";
+done
 
-# User specific aliases and functions
-sourcesafely $XDG_CONFIG_HOME/bashrc/env;
-sourcesafely $XDG_CONFIG_HOME/bashrc/aliases;
-sourcesafely $XDG_CONFIG_HOME/bashrc/head;
-
-unset sourcesafely;
+# user bash head file
+HEAD_FILE="$XDG_CONFIG_HOME/bashrc/head";
+[[ -f "$HEAD_FILE" ]] && . "$HEAD_FILE";
+unset HEAD_FILE;

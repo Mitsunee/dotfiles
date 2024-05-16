@@ -38,7 +38,8 @@ export KDEHOME="$XDG_CONFIG_HOME/kde"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
-export PAGER=moar
+export PAGER="moar --quit-if-one-screen"
+export BAT_PAGER="moar --quit-if-one-screen --no-linenumbers"
 export EDITOR=nano
 
 #PATH
