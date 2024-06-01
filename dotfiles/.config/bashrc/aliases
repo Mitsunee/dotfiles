@@ -29,7 +29,7 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias gca-no-edit='git commit --amend --no-edit'
-alias glog='git log --oneline | head -n 20'
+alias glog='git log --oneline -n 20'
 alias git-latest-tag='git describe --tags `git rev-list --tags --max-count=1`'
 alias git-checkout-latest='git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"'
 
