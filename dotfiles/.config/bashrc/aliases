@@ -64,6 +64,7 @@ alias uninstall='sudo dnf remove'
 alias less='moar'
 alias more='moar'
 alias killcord='killall -9 Discord'
+alias convert='magick'
 
 ### Custom Commands ###
 # list directories in $PATH
