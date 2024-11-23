@@ -22,6 +22,3 @@ unset print_logo
 if [ -x "$(command -v starship)" ]; then
   eval "$(starship init bash)"
 fi
-
-# autocompletion for scripts
-complete -W '-a -y -h --all --assume-yes --help' upg
