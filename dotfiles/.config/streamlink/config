@@ -1,2 +1,0 @@
-player=vlc --network-caching 7500
-player-no-close
