@@ -65,6 +65,7 @@ alias less='moar'
 alias more='moar'
 alias killcord='killall -9 Discord'
 alias convert='magick'
+alias kdeconnect-restart='killall kdeconnectd && kdeconnect-cli --refresh'
 
 ### Custom Commands ###
 # list directories in $PATH
